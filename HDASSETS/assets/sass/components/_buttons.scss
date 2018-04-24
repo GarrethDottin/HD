@@ -1,0 +1,41 @@
+//---------------------------
+// Buttons
+//---------------------------
+
+.button,
+a.button {
+  display: inline-block;
+  text-align: center;
+  padding: quarter($line-height__base) half($line-height__base);
+  font-family: $font__sans-serif;
+  font-size: $font-size__tiny;
+  line-height: $line-height__medium;
+  letter-spacing: 1px;
+  border: 0;
+  border-radius: 0;
+  text-decoration: none;
+  color: $color__type;
+  background-color: #fff;
+  border: 1px solid $border-color;
+  transition: $base-transition-speed;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $color__type;
+    background-color: $grey-bg;
+  }
+
+  &--expand { width: 100%; }
+
+  &--small {
+    padding: quarter($line-height__small) half($line-height__small);
+    line-height: $line-height__small;
+  }
+
+  &--large {
+    padding: half($line-height__base) ($line-height__base);
+    font-size: $font-size__small;
+    line-height: $line-height__medium;
+  }
+}

@@ -1,0 +1,51 @@
+//---------------------------
+// Header
+//---------------------------
+
+.logo {
+  display: block;
+  margin-bottom: 0;
+  line-height: $line-height__base;
+
+  @media #{$medium-down} { line-height: $line-height__medium; }
+
+  a {
+    transition: $base-transition-speed;
+    text-decoration: none;
+    letter-spacing: 1px;
+
+    &:hover { color: $color__type--hover; }
+  }
+
+  &__img {
+    max-height: $line-height__base;
+    vertical-align: middle;
+  }
+}
+
+.site-header {
+  position: relative;
+  padding: half($line-height__medium) 0;
+  line-height: $line-height__medium;
+  background-color: white !important;
+
+  @media #{$medium-up} {
+    padding: half($line-height__base) 0;
+
+    &.cover-exist {
+      padding: $line-height__medium 0;
+    }
+  }
+
+  @media #{$large-up} {
+    z-index: 100;
+    width: 100%;
+  }
+
+  @media #{$large-up} {
+    &.cover-exist {
+      height: $header-height;
+      margin-top: calc(100vh - #{$header-height});
+    }
+  }
+}

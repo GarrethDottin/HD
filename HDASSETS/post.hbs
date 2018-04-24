@@ -1,0 +1,89 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+
+{{#post}}
+
+<div class="wrapper">
+
+  <div class="post-cover">
+    {{#if image}}
+      <div class="row row--full">
+        <div class="column large-12">
+          <div class="FlexEmbed FlexEmbed--2by1 cover-image cover-image--entry" style="background-image: url({{ image }})"></div>
+        </div>
+      </div>
+    {{/if}}
+
+    <div class="{{#if image}} post-cover__header {{/if}}">
+      <div class="row">
+        <div class="column {{^if image}} column--center medium-10 large-7 {{/if}}">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column column--center medium-10 large-7">
+        <div class="text-center post__header">
+          <h2 class="post__title">{{ title }}</h2>
+          <time class="post__date sans-serif uppercase" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM YYYY"}}</time>
+        </div>
+      <article class="{{post_class}}">
+        <div class="row">
+          <div class="column medium-2 large-2 bottom-gutter">
+            {{> share}}
+          </div>
+        </div>
+          <div class="post__content">
+            {{ content }}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column medium-10 large-10">
+            <div class="post__tags">
+              {{tags separator=""}}
+            </div>
+          </div>
+          <div class="column medium-2 large-2">
+            {{> share}}
+          </div>
+        </div>
+
+        <hr>
+
+        {{> author}}
+
+        {{> post-prev-next-pagination}}
+
+        <hr>
+
+        {{#if @labs.subscribers}}
+          {{> subscribe-form}}
+          <hr>
+        {{/if}}
+
+        {{> disqus}}
+
+      </article>
+
+    </div> {{! column }}
+  </div> {{! row }}
+
+</div> {{! wrapper }}
+<span id="testing1" data-sumome-listbuilder-embed-id="d37dfa32-ee3f-490d-bf7e-7356dedd9d7f"></span>
+<script type="text/javascript">
+    var _mfq = _mfq || [];
+    (function() {
+        var mf = document.createElement("script");
+        mf.type = "text/javascript"; mf.async = true;
+        mf.src = "//cdn.mouseflow.com/projects/54ae0e1d-ddd5-47aa-8c91-72ed59cb3f36.js";
+        document.getElementsByTagName("head")[0].appendChild(mf);
+    })();
+
+</script>
+{{/post}}

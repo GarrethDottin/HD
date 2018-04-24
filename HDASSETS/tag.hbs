@@ -1,0 +1,30 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+<div class="wrapper">
+
+  <div class="row row--full">
+    <div class="column column--center large-8">
+      <header class="page-header">
+        {{> "tag-header"}}
+      </header>
+    </div>
+  </div>
+
+  <div class="row row--full">
+    <div class="column large-12">
+
+      <main class="content author-template">
+        <div class="row row--full">
+          <div class="post-list">
+            {{> loop}}
+          </div>
+        </div>
+        <div class="row">
+          {{pagination}}
+        </div>
+      </main>
+
+    </div>
+  </div>
+</div>
