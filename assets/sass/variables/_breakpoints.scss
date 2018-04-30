@@ -1,0 +1,33 @@
+//---------------------------
+// Break Points
+//---------------------------
+
+// @media #{$medium-down} {  }
+
+$screen:      "only screen" !default;
+$medium-up:   "#{$screen} and (min-width: 40.063em)";
+$medium-down: "#{$screen} and (max-width: 40em)";
+$large-up:    "#{$screen} and (min-width: 64em)";
+$screen-large: "screen and (max-width: 1600px) and (min-width: 1200px)";
+$screen-mid-large: "screen and (max-width: 1400px) and (min-width: 1200px)";
+
+/*Small Desktop*/
+$screen-desktop-sm: "screen and (max-width:1199px) and (min-width:1025px)";
+/*Small Desktop*/
+
+/*Tablet*/
+$screen-tablet: "screen and (max-width:1024px) and (min-width:768px)";
+$screen-tablet-lg: "screen and (max-width:1024px) and (min-width:991px)";
+$screen-tablet-sm: "screen and (max-width:990px) and (min-width:768px)";
+/*Tablet*/
+
+/*Mobile*/
+$screen-large-mobile: "screen and (max-width:767px) and (min-width:641px)";
+$screen-mid-mobile: "screen and (max-width:640px) and (min-width:412px)";
+$screen-mid-mobile3: "screen and (max-width: 640px) and (min-width:513px)";
+$screen-mid-mobile2: "screen and (max-width: 512px) and (min-width:461px)";
+$screen-mid-mobile1: "screen and (max-width:460px) and (min-width:412px)";
+$screen-mobile: "screen and (max-width:767px) and (min-width:320px)";
+$screen-small-mobile: "screen and (max-width:350px) and (min-width:320px)";
+$screen-mobile-320: "only screen and (max-width: 320px)";
+/*Mobile*/
