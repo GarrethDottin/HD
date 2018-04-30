@@ -106,14 +106,19 @@
     width: 100%;
     form {
       display: inline-block;
+      width: 100%;
       input {
         width: 68%;
-        font-size: 14pt;
+        font-size: 12pt;
+        margin-right: -4px;
+        border-radius: 4px;
       }
       button {
         width: 29%;
-        font-size: 14pt;
+        font-size: 12pt;
         padding: 4px 0;
+        border-radius: 4px;
+        margin-left: -4px;
       }
     }
   }
