@@ -3,7 +3,7 @@
 //---------------------------
 
 .signup-section {
-  background: $teal;
+  background: $mid-blue;
   clear: both;
   color: $white;
   height: 100vh;
@@ -60,18 +60,18 @@
     }
   }
   button {
-    background: #7ecb97;
+    background: $light-teal;
     color: $white;
     padding: 4px 11px;
-    border: 1px solid #7ecb97;
+    border: 1px solid $light-teal;
     font-size: 13pt;
     display: inline-block;
     vertical-align: middle;
     height: 40px;
     border-radius: 2px;
     &:hover {
-      background: #65b77e;
-      border: 1px solid #65b77e;
+      background: $teal-hover;
+      border: 1px solid $teal-hover;
     }
   }
 }

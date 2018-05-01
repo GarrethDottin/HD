@@ -62,10 +62,10 @@
         margin-bottom: 15px;
       }
       button {
-        background: #7ecb97;
+        background: $light-teal;
         color: #fff;
         padding: 4px 11px;
-        border: 1px solid #7ecb97;
+        border: 1px solid $light-teal;
         font-size: 12pt;
         display: inline-block;
         vertical-align: middle;
@@ -81,8 +81,8 @@
           line-height: 0;
         }
         &:hover {
-          background: #65b77e;
-          border: 1px solid #65b77e;
+          background: $teal-hover;
+          border: 1px solid $teal-hover;
         }
       }
       .long-google-sign-in-btn {
