@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="{{meta_description}}">
+  <meta name="google-site-verification" content="ncdTwSS0Ujv3Cx4hJpVNfRUjjWgfgJWqxYgUpzOgkFw" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="fb:pages" content="318998655118077" />
+  <meta name="google-signin-client_id" content="335014375957-1r53l6sss8dcm2r681pasbgtcchp849e.apps.googleusercontent.com">
+  <title>{{meta_title}}</title>
+  <link rel="shortcut icon" href="{{asset "/hd-square-logo.png"}}">
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{asset "css/app.min.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "bower_components/Morphext/dist/morphext.css"}}" />
+  <script type="text/javascript" src="{{asset "bower_components/Morphext/dist/morphext.min.js"}}"></script>
+
+  {{! Fade effect }}
+  <script type="text/javascript">
+    document.documentElement.className = ' fade-out';
+  </script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Morphext/2.4.4/morphext.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Morphext/2.4.4/morphext.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset "css/app.min.css"}}">
+  <!--<script src="//load.sumome.com/" data-sumo-site-id="6fabb4131c9aff1dcf2f104531325fe78c5b73068e238bc33d950c12b2956239" async="async"></script>-->
+  {{! Ghost outputs important style and meta data with this tag }}
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+  <div class="off-canvas-container">
+    {{{body}}}
+  </div>
+
+  {{! The main JavaScript file }}
+  <script type="text/javascript" src="{{asset "js/app.min.js"}}"></script>
+
+</body>
+<footer>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-4710282-6', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+</footer>
+</html>

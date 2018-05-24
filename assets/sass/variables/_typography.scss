@@ -1,0 +1,26 @@
+//---------------------------
+// Typography
+//---------------------------
+
+$font__serif: Born, serif;
+$font__sans-serif: Muli, Helvetica, Arial, sans-serif;
+$font__monospace: Courier, monospace;
+$font__banner: IndependentScript;
+$font__futura-mid: FuturaPT-Medium, sans-serif;
+$font__futura-mid-obl: FuturaPT-MediumObl, sans-serif;
+$font__futura-book-obl: FuturaPT-BookObl, sans-serif;
+$font__din-pro-con-b: DINPro-CondensedBold, sans-serif;
+
+$font-size__base: 19px;
+$font-size__medium: 16px;
+$font-size__small: 14px;
+$font-size__tiny: 12px;
+
+$font-weight__light: 300;
+$font-weight__regular: 400;
+$font-weight__bold: 700;
+
+$line-height__base: round($font-size__base * 1.7);
+$line-height__medium: round($font-size__medium * 1.55);
+$line-height__small: round($font-size__small * 1.55);
+$line-height__tiny: round($font-size__tiny * 1.55);

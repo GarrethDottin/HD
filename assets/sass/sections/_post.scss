@@ -1,0 +1,103 @@
+//---------------------------
+// Post Page
+//---------------------------
+
+.post {
+  margin-bottom: $line-height__medium;
+  padding: $line-height__medium 0 0;
+
+  @media #{$large-up} {
+    margin-bottom: $line-height__base;
+    padding: $line-height__base 0 0;
+  }
+
+  &-cover {
+    @media #{$medium-up} {
+      position: relative;
+
+      &__header {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .post__header {
+          color: #fff;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__header {
+    padding: $line-height__medium;
+    background-color: $grey-bg;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    font-size: $font-size__base;
+    font-family: $font__sans-serif;
+
+    @media #{$medium-up} {
+      font-weight: $font-weight__regular;
+      font-size: double($font-size__tiny);
+      line-height: double($line-height__tiny);
+    }
+
+    @media #{$large-up} {
+      font-size: double($font-size__base);
+      line-height: double($line-height__medium);
+    }
+  }
+
+  &__date {
+    font-size: $font-size__tiny;
+    line-height: $line-height__small;
+    display: block;
+
+    @media #{$medium-up} {
+      font-size: $font-size__small;
+    }
+  }
+
+  &__content {
+    a {
+      background-image: linear-gradient(to bottom, $color__type, $color__type);
+      text-shadow: -1px -1px 0 #FDFDFD, 1px -1px 0 #FDFDFD, -1px 1px 0 #FDFDFD, 1px 1px 0 #FDFDFD;
+      background-repeat: repeat-x;
+      background-size: 1px 1px;
+      background-position: 0 96%;
+      text-decoration: none;
+
+      &:hover {
+        background-image: linear-gradient(to bottom, $color__type--hover, $color__type--hover);
+      }
+    }
+  }
+
+  &__tags {
+    font-size: $font-size__small;
+
+    a {
+      padding: half(quarter($line-height__small)) half($line-height__small);
+      margin: half(quarter($line-height__base)) quarter($line-height__base) half(quarter($line-height__base)) 0;
+      display: inline-block;
+
+      font-size: $font-size__tiny;
+      line-height: $line-height__small;
+
+      color: $color__type;
+      background-color: $grey-bg;
+      border: 1px solid $border-color;
+      text-decoration: none;
+      transition: $base-transition-speed;
+
+      &:hover { background-color: $grey-bg--darker; }
+    }
+
+    @media #{$medium-down} {
+      margin-bottom: $line-height__medium - half(quarter($line-height__medium));
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{{! The blog cover area on the homepage }}
+{{#foreach posts}}
+  {{#is 'home'}}
+    {{#if @first}}
+      <div class="site-cover cover-image cover-image--hero" style="background-image: url({{image}})">
+        <div class="site-cover__content">
+          <a href="{{url}}">
+            <div class="site-cover__title">
+              {{title}}
+            </div>
+          </a>
+        </div>
+      </div>
+    {{/if}}
+  {{/is}}
+{{/foreach}}
+
+<header class="site-header {{#is 'home'}}{{#if @blog.cover}}cover-exist{{/if}}{{/is}}">
+
+  <div class="row row--full">
+
+    <div class="column small-8 medium-3 large-5">
+      {{#if @blog.logo}}
+      <img id="header-image-mod" src="http://i.imgur.com/MuNjUsp.png"/>
+      {{else}}
+      <h1 class="logo"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+      {{/if}}
+    </div>
+
+    <label class="off-canvas-toggle"><span data-icon="ei-navicon" data-size="s"></span></label>
+
+    <div class="off-canvas-content">
+      <div class="column medium-6 large-6">
+        <nav class="navigation navigation--header">
+          <ul class="list-bare">
+            {{navigation}}
+            <li class="navigation"><a href="http://habitsanddesign.com/hd-signup">Sign up</a>
+            </li>
+            <li class="navigation"><a href="http://habitsanddesign.com/about">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </div> {{! row }}
+
+</header>

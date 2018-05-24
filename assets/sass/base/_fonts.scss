@@ -1,0 +1,69 @@
+//---------------------------
+// Fonts
+//---------------------------
+
+@font-face {
+  font-family: 'Born';
+  src: url('/assets/fonts/Born/Born.eot');
+  src: url('/assets/fonts/Born/Born.woff2') format('woff2'),
+       url('/assets/fonts/Born/Born.woff') format('woff'),
+       url('/assets/fonts/Born/Born.ttf') format('truetype'),
+       url('/assets/fonts/Born/Born.svg#Born') format('svg'),
+       url('/assets/fonts/Born/Born.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IndependentScript';
+  src: url('/assets/fonts/Independent-Script/IndependentScript-Regular.eot');
+  src: url('/assets/fonts/Independent-Script/IndependentScript-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/Independent-Script/IndependentScript-Regular.otf') format('otf'), /* Super Modern Browsers */
+       url('/assets/fonts/Independent-Script/IndependentScript-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/assets/fonts/Independent-Script/IndependentScript-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Georgina';
+  src: url('/assets/fonts/Georgina/Georgina-Italic.eot');
+  src: url('/assets/fonts/Georgina/Georgina-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/assets/fonts/Georgina/Georgina-Italic.otf') format('otf'), /* Super Modern Browsers */
+  url('/assets/fonts/Georgina/Georgina-Italic.woff') format('woff'), /* Pretty Modern Browsers */
+  url('/assets/fonts/Georgina/Georgina-Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'FuturaPT-Medium';
+  src: url('/assets/fonts/Futura/FuturaPT-Medium.eot');
+  src: url('/assets/fonts/Futura/FuturaPT-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/assets/fonts/Futura/FuturaPT-Medium.otf') format('otf'), /* Super Modern Browsers */
+  url('/assets/fonts/Futura/FuturaPT-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+  url('/assets/fonts/Futura/FuturaPT-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'FuturaPT-MediumObl';
+  src: url('/assets/fonts/Futura/FuturaPT-MediumObl.eot');
+  src: url('/assets/fonts/Futura/FuturaPT-MediumObl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/assets/fonts/Futura/FuturaPT-MediumObl.otf') format('otf'), /* Super Modern Browsers */
+  url('/assets/fonts/Futura/FuturaPT-MediumObl.woff') format('woff'), /* Pretty Modern Browsers */
+  url('/assets/fonts/Futura/FuturaPT-MediumObl.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'FuturaPT-BookObl';
+  src: url('/assets/fonts/Futura/FuturaPT-BookObl.eot');
+  src: url('/assets/fonts/Futura/FuturaPT-BookObl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/assets/fonts/Futura/FuturaPT-BookObl.otf') format('otf'), /* Super Modern Browsers */
+  url('/assets/fonts/Futura/FuturaPT-BookObl.woff') format('woff'), /* Pretty Modern Browsers */
+  url('/assets/fonts/Futura/FuturaPT-BookObl.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'DINPro-CondensedBold';
+  src: url('/assets/fonts/DINPro/DINPro-CondensedBold.eot');
+  src: url('/assets/fonts/DINPro/DINPro-CondensedBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/assets/fonts/DINPro/DINPro-CondensedBold.otf') format('otf'), /* Super Modern Browsers */
+  url('/assets/fonts/DINPro/DINPro-CondensedBold.woff') format('woff'), /* Pretty Modern Browsers */
+  url('/assets/fonts/DINPro/DINPro-CondensedBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+}

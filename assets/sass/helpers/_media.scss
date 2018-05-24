@@ -1,0 +1,50 @@
+//---------------------------
+// Cover Image
+//---------------------------
+
+// Cover Image for Post Card Image
+// The hero modifier is used for the cover on homepage
+// The entry modifier is used for single post/page image
+
+.cover-image {
+  background-color: $grey-bg--darker;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--hero {
+    outline: 1px solid #fff;
+    outline-offset: - $line-height__medium;
+
+    @media #{$large-up} { outline-offset: - $line-height__base; }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      content: "";
+      background-color: #000;
+      opacity: 0.3;
+    }
+  }
+
+  &--entry {
+    @media #{$medium-up} {
+      outline: 1px solid #fff;
+      outline-offset: - $line-height__medium;
+
+      @media #{$large-up} { outline-offset: - $line-height__base; }
+
+      &:after {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        content: "";
+        background-color: #000;
+        opacity: 0.3;
+      }
+    }
+  }
+}

@@ -1,0 +1,178 @@
+//---------------------------
+// Post
+//---------------------------
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $line-height__medium;
+  background: #fff;
+  position: relative;
+
+  &__image {
+    @media #{$medium-up} {
+      &.fadein {
+        opacity: 0;
+        transition: opacity $base-transition-speed ease-in-out;
+
+        &.inview {
+          opacity: 1;
+        }
+
+        @media screen and ( -webkit-min-device-pixel-ratio: 0 ) { opacity: 1; }
+      }
+    }
+
+    &:after {
+      transition: $base-transition-speed;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      content: "";
+      background-color: white;
+      opacity: 0;
+    }
+  }
+
+  // Wide Post Cards on home page, the first two posts in large screens
+
+  @media #{$large-up} {
+    &--wide {
+      display: block;
+
+      &:before {
+        content: "";
+        display: block;
+        padding-bottom: 56.25%;
+      }
+    }
+
+    &--wide &__image {
+      float: left;
+      width: 50%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+
+    &--wide &__info {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+    }
+
+    &--wide &__title {
+      position: absolute;
+      bottom: $line-height__base;
+      left: $line-height__base;
+      right: $line-height__base;
+    }
+  }
+
+  &__info {
+    background-color: $grey-bg--darker;
+    text-decoration: none;
+    padding: $line-height__medium;
+
+    &:hover { color: $color__type; }
+
+    @media #{$medium-up} {
+      flex: 1;
+      padding: $line-height__base;
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-size: $font-size__base;
+    line-height: $line-height__medium;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &:after {
+      width: 0;
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-bottom: 1px solid $color__type--hover;
+      transition: width $base-transition-speed;
+    }
+
+    @media #{$medium-up} {
+      font-size: double($font-size__tiny);
+      line-height: double($font-size__small);
+    }
+
+    a {
+      display: inline;
+      border-bottom: none;
+      transition: $base-transition-speed;
+
+      background-size: 0 100%;
+      background-repeat: no-repeat;
+
+      &:hover {
+        color: $color__type;
+      }
+    }
+  }
+
+  &__meta {
+    margin-bottom: quarter($line-height__base);
+    font-size: $font-size__tiny;
+    line-height: $line-height__small;
+    color: $color__type--hover;
+
+    a { color: $color__type--hover; text-decoration: none; }
+  }
+
+  &:hover {
+    .post-card__image:after {
+      opacity: 0.1;
+    }
+
+    .post-card__title:after {
+      width: 100%;
+    }
+  }
+
+  &--featured {
+    &__icon {
+      position: absolute;
+      bottom: quarter($line-height__base);
+      left: quarter($line-height__base);
+      fill: #fff;
+    }
+  }
+
+  @media #{$large-up} {
+    margin-bottom: $line-height__base;
+  }
+}
+
+// Make post cards to have the same height
+
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  // Safari (iPad)
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+
+  .post-card-wrap {
+    display: flex;
+
+    // Safari (iPad)
+    display: -webkit-flex;
+  }
+
+  .post-card {
+    width: 100%;
+  }
+}

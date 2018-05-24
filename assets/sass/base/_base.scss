@@ -1,0 +1,41 @@
+//---------------------------
+// Base
+//---------------------------
+
+*,
+*:before,
+*:after { box-sizing: border-box; }
+
+// Fade-in effect
+
+html {
+  opacity: 1;
+  transition: 1s opacity;
+
+  .fade-out {
+    opacity: 0;
+    transition: none;
+  }
+}
+
+.wrapper {
+  position: relative;
+  background-color: #fff;
+  padding: $line-height__medium 0;
+
+  @media #{$large-up} { padding: $line-height__base 0; }
+}
+
+// Make the footer stick to the bottom if content is small
+
+.off-canvas-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  .wrapper { flex: 1 0 auto; }
+}
+
+// Fix Evil Icons to be vertical align
+
+.icon { vertical-align: bottom; }
