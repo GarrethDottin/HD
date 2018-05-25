@@ -145,12 +145,20 @@
 
 @media #{$screen-mobile} {
   .banner-section {
-    background: url("/assets/images/banner-mobile-large.png") no-repeat center;
+    background: url("/assets/images/banner-mobile.jpg") no-repeat center;
     background-size: cover;
     height: 80vh;
     width: 100%;
-    .banner-bylines {
-      display: none;
+    .banner-wrapper {
+      .banner-subscribe {
+        .banner-bylines {
+          font-size: 12pt;
+          margin-bottom: 2px;
+        }
+        .banner-bylines:last-child {
+          margin-bottom: 5px;
+        }
+      }
     }
   }
 }
