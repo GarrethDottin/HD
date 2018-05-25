@@ -59,6 +59,26 @@ function addUserToMailChimp($form, fromGoogleSignin) {
   });
 }
 
+// function cycleTexts () { 
+//   console.log('executed')
+//   console.log($("#quote-text"))
+//   $("#quote-text").Morphext({
+//     // The [in] animation type. Refer to Animate.css for a list of available animations.
+//     animation: "bounceIn",
+//     // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+//     separator: ",text, 1,",
+//     // The delay between the changing of each phrase in milliseconds.
+//     speed: 2000,
+//     complete: function () {
+//         // Called after the entrance animation is executed.
+//         console.log('working')
+//     }
+//   });
+  
+
+
+// }
+
 function showAlert(message) {
   var snackbar = document.getElementById('snackbar');
   snackbar.className = 'show';
@@ -68,8 +88,9 @@ function showAlert(message) {
   }, 3000);
 }
 
+
+
 $(document).ready(function() {
-  console.log('testing upload');
 
   // ========================
   // For Fade-in effect
@@ -116,17 +137,37 @@ $(document).ready(function() {
 
   $('.wrapper').fitVids();
 
-  $("#rotatingText").Morphext({
-    // The [in] animation type. Refer to Animate.css for a list of available animations.
-    animation: "fadeIn",
-    // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
-    separator: ",Testing, Text",
-    // The delay between the changing of each phrase in milliseconds.
-    speed: 2000,
-    complete: function () {
-        // Called after the entrance animation is executed.
-    }
+  // cycleTexts();
+
+
+  // ==================
+  // Cycling Text 
+  // ==================
+
+  $(".user:nth-child(2)").click(function() {
+    $(this).addClass("user-active", { duration: 5000 });
+    $(".user:nth-child(1), .user:nth-child(3)").removeClass("user-active");
+    $(".quote_user1, .quote_user3").fadeOut(700);
+    $(".quote_user2").delay(700).fadeIn(700);
   });
+
+  $(".user:nth-child(3)").click(function() {
+    $(this).addClass("user-active", {
+      duration: 5000
+    });
+    $(".user:nth-child(1), .user:nth-child(2)").removeClass("user-active");
+    $(".quote_user1, .quote_user2").fadeOut(700);
+    $(".quote_user3").delay(700).fadeIn(700);
+  });
+
+            $(".user:nth-child(1)").click(function() {
+                $(this).addClass("user-active", {
+                    duration: 5000
+                });
+                $(".user:nth-child(3), .user:nth-child(2)").removeClass("user-active");
+                $(".quote_user3, .quote_user2").fadeOut(700);
+                $(".quote_user1").delay(700).fadeIn(700);
+            });  
 
   $('.banner-subscribe button.subscribe-button').click(function(event) {
     event.preventDefault();
@@ -144,4 +185,6 @@ $(document).ready(function() {
     addUserToMailChimp($form);
     return false;
   });
+
+
 });
